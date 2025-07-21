@@ -1,0 +1,262 @@
+{
+  "summary": {
+    "working_endpoints": [
+      "https://opendata.cbs.nl/statline/portal.html?_la=en&_catalog=CBS",
+      "https://opendata.cbs.nl/statline/portal.html",
+      "https://opendata.cbs.nl/CBS/en/dataset",
+      "https://opendata.cbs.nl/CBS/nl/dataset",
+      "https://opendata.cbs.nl/dataportaal/portal.html",
+      "https://opendata.cbs.nl/api/v1",
+      "https://opendata.cbs.nl/api/v2"
+    ],
+    "working_datasets": [
+      {
+        "dataset_id": "83625NED",
+        "base_url": "https://opendata.cbs.nl/ODataApi/odata/",
+        "records": 7
+      },
+      {
+        "dataset_id": "83765NED",
+        "base_url": "https://opendata.cbs.nl/ODataApi/odata/",
+        "records": 6
+      },
+      {
+        "dataset_id": "85015NED",
+        "base_url": "https://opendata.cbs.nl/ODataApi/odata/",
+        "records": 6
+      },
+      {
+        "dataset_id": "82900NED",
+        "base_url": "https://opendata.cbs.nl/ODataApi/odata/",
+        "records": 8
+      },
+      {
+        "dataset_id": "71486ned",
+        "base_url": "https://opendata.cbs.nl/ODataApi/odata/",
+        "records": 8
+      },
+      {
+        "dataset_id": "84848NED",
+        "base_url": "https://opendata.cbs.nl/ODataApi/odata/",
+        "records": 8
+      }
+    ],
+    "total_working_endpoints": 7,
+    "total_working_datasets": 6,
+    "exploration_date": "2025-07-21T22:29:16.322485"
+  },
+  "endpoint_results": {
+    "https://opendata.cbs.nl/statline/portal.html?_la=en&_catalog=CBS": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "working": true,
+      "response_size": "unknown",
+      "response_type": "html",
+      "contains_data": true
+    },
+    "https://opendata.cbs.nl/statline/portal.html": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "working": true,
+      "response_size": "unknown",
+      "response_type": "html",
+      "contains_data": true
+    },
+    "https://opendata.cbs.nl/CBS/en/dataset": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "working": true,
+      "response_size": "unknown",
+      "response_type": "html",
+      "contains_data": false
+    },
+    "https://opendata.cbs.nl/CBS/nl/dataset": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "working": true,
+      "response_size": "unknown",
+      "response_type": "html",
+      "contains_data": false
+    },
+    "https://opendata.cbs.nl/dataportaal/portal.html": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "working": true,
+      "response_size": "unknown",
+      "response_type": "html",
+      "contains_data": false
+    },
+    "https://opendata.cbs.nl/ODataApi/odata/v4": {
+      "status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "working": false,
+      "response_size": "3292"
+    },
+    "https://opendata.cbs.nl/api/v1": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "working": true,
+      "response_size": "unknown",
+      "response_type": "html",
+      "contains_data": false
+    },
+    "https://opendata.cbs.nl/api/v2": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "working": true,
+      "response_size": "unknown",
+      "response_type": "html",
+      "contains_data": false
+    },
+    "https://odata4.cbs.nl/CBS": {
+      "status": "error",
+      "error": "Server disconnected",
+      "working": false
+    },
+    "https://beta-odata4.cbs.nl/CBS": {
+      "status": "error",
+      "error": "Server disconnected",
+      "working": false
+    }
+  },
+  "dataset_results": {
+    "83625NED": {
+      "https://opendata.cbs.nl/statline/portal.html?_la=en&_catalog=CBS&tableId=": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      "https://opendata.cbs.nl/ODataApi/odata/": {
+        "status": 200,
+        "working": true,
+        "content_type": "application/json",
+        "data_records": 7
+      },
+      "https://odata4.cbs.nl/CBS/": {
+        "status": "error",
+        "error": "Server disconnected",
+        "working": false
+      },
+      "https://opendata.cbs.nl/CBS/en/dataset/": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    "83765NED": {
+      "https://opendata.cbs.nl/statline/portal.html?_la=en&_catalog=CBS&tableId=": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      "https://opendata.cbs.nl/ODataApi/odata/": {
+        "status": 200,
+        "working": true,
+        "content_type": "application/json",
+        "data_records": 6
+      },
+      "https://odata4.cbs.nl/CBS/": {
+        "status": "error",
+        "error": "Server disconnected",
+        "working": false
+      },
+      "https://opendata.cbs.nl/CBS/en/dataset/": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    "85015NED": {
+      "https://opendata.cbs.nl/statline/portal.html?_la=en&_catalog=CBS&tableId=": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      "https://opendata.cbs.nl/ODataApi/odata/": {
+        "status": 200,
+        "working": true,
+        "content_type": "application/json",
+        "data_records": 6
+      },
+      "https://odata4.cbs.nl/CBS/": {
+        "status": "error",
+        "error": "Server disconnected",
+        "working": false
+      },
+      "https://opendata.cbs.nl/CBS/en/dataset/": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    "82900NED": {
+      "https://opendata.cbs.nl/statline/portal.html?_la=en&_catalog=CBS&tableId=": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      "https://opendata.cbs.nl/ODataApi/odata/": {
+        "status": 200,
+        "working": true,
+        "content_type": "application/json",
+        "data_records": 8
+      },
+      "https://odata4.cbs.nl/CBS/": {
+        "status": "error",
+        "error": "Server disconnected",
+        "working": false
+      },
+      "https://opendata.cbs.nl/CBS/en/dataset/": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    "71486ned": {
+      "https://opendata.cbs.nl/statline/portal.html?_la=en&_catalog=CBS&tableId=": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      "https://opendata.cbs.nl/ODataApi/odata/": {
+        "status": 200,
+        "working": true,
+        "content_type": "application/json",
+        "data_records": 8
+      },
+      "https://odata4.cbs.nl/CBS/": {
+        "status": "error",
+        "error": "Server disconnected",
+        "working": false
+      },
+      "https://opendata.cbs.nl/CBS/en/dataset/": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    "84848NED": {
+      "https://opendata.cbs.nl/statline/portal.html?_la=en&_catalog=CBS&tableId=": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      "https://opendata.cbs.nl/ODataApi/odata/": {
+        "status": 200,
+        "working": true,
+        "content_type": "application/json",
+        "data_records": 8
+      },
+      "https://odata4.cbs.nl/CBS/": {
+        "status": "error",
+        "error": "Server disconnected",
+        "working": false
+      },
+      "https://opendata.cbs.nl/CBS/en/dataset/": {
+        "status": 200,
+        "working": true,
+        "content_type": "text/html; charset=utf-8"
+      }
+    }
+  }
+}
