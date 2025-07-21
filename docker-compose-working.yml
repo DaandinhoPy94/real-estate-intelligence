@@ -1,0 +1,62 @@
+services:
+  # PostgreSQL with TimescaleDB (simplified)
+  postgres:
+    image: timescale/timescaledb:latest-pg14
+    container_name: real_estate_db
+    environment:
+      POSTGRES_DB: real_estate
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infrastructure/database/init-simple.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: real_estate_redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # FastAPI Application - FIXED
+  api:
+    image: python:3.9-slim
+    container_name: real_estate_api
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/real_estate
+      REDIS_URL: redis://redis:6379
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: >
+      bash -c "
+        pip install fastapi uvicorn asyncpg redis aiohttp pydantic &&
+        echo 'Starting API with main_fixed.py' &&
+        python -m uvicorn api.main_fixed:app --host 0.0.0.0 --port 8000 --reload
+      "
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  redis_data:
